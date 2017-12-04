@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xiB-fz-JFL">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Futura.ttc">
+            <string>Futura-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Set Count Down View Controller-->
+        <scene sceneID="Ili-oG-y4T">
+            <objects>
+                <viewController id="xiB-fz-JFL" customClass="SetCountDownViewController" customModule="TinkerBell" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="M82-PY-PJT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="出発時刻 ：09:30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LM8-Lv-fuZ">
+                                <rect key="frame" x="66" y="50" width="243" height="39"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="d1l-CN-pER">
+                                <rect key="frame" x="0.0" y="109" width="375" height="388"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJa-Yx-2Yy">
+                                <rect key="frame" x="152.5" y="547" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="OdP-O8-jRN"/>
+                                    <constraint firstAttribute="width" secondItem="zJa-Yx-2Yy" secondAttribute="height" multiplier="1:1" id="qwN-l8-W5j"/>
+                                </constraints>
+                                <state key="normal" image="Save"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="93S-vB-XBB" firstAttribute="bottom" secondItem="zJa-Yx-2Yy" secondAttribute="bottom" constant="50" id="Avk-Sa-DjP"/>
+                            <constraint firstItem="LM8-Lv-fuZ" firstAttribute="centerX" secondItem="M82-PY-PJT" secondAttribute="centerX" id="Kty-lc-als"/>
+                            <constraint firstItem="93S-vB-XBB" firstAttribute="trailing" secondItem="d1l-CN-pER" secondAttribute="trailing" id="Q1X-y1-BZw"/>
+                            <constraint firstItem="zJa-Yx-2Yy" firstAttribute="centerX" secondItem="M82-PY-PJT" secondAttribute="centerX" id="VxV-Qs-ryL"/>
+                            <constraint firstItem="LM8-Lv-fuZ" firstAttribute="top" secondItem="93S-vB-XBB" secondAttribute="top" constant="30" id="dGN-Vw-6dZ"/>
+                            <constraint firstItem="d1l-CN-pER" firstAttribute="top" secondItem="LM8-Lv-fuZ" secondAttribute="bottom" constant="20" id="gzc-Ub-jIx"/>
+                            <constraint firstItem="zJa-Yx-2Yy" firstAttribute="top" secondItem="d1l-CN-pER" secondAttribute="bottom" constant="50" id="kN6-Qm-69e"/>
+                            <constraint firstItem="d1l-CN-pER" firstAttribute="leading" secondItem="93S-vB-XBB" secondAttribute="leading" id="spj-TU-FTz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="93S-vB-XBB"/>
+                    </view>
+                    <connections>
+                        <outlet property="departureTimeLabel" destination="LM8-Lv-fuZ" id="qnx-lW-W5O"/>
+                        <outlet property="saveButton" destination="zJa-Yx-2Yy" id="jd9-36-EC5"/>
+                        <outlet property="tableView" destination="d1l-CN-pER" id="UMU-lO-gji"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ulL-AD-P1N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-154.40000000000001" y="-54.422788605697157"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Save" width="200" height="200"/>
+    </resources>
+</document>

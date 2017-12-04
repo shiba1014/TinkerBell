@@ -1,0 +1,6 @@
+framework module Pods_TinkerBell {
+  umbrella header "Pods-TinkerBell-umbrella.h"
+
+  export *
+  module * { export * }
+}

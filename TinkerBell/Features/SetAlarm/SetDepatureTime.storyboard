@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="o2h-Ep-a9l">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Futura.ttc">
+            <string>Futura-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Set Depature Time View Controller-->
+        <scene sceneID="F85-Wg-e1v">
+            <objects>
+                <viewController id="o2h-Ep-a9l" customClass="SetDepatureTimeViewController" customModule="TinkerBell" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1Au-dj-SxT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qi9-c6-t2F">
+                                <rect key="frame" x="27.5" y="225" width="320" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="-978310799.92968297">
+                                    <!--1969-12-31 23:00:00 +0000-->
+                                </date>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="出発時間" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oHd-Jf-zNs">
+                                <rect key="frame" x="128" y="136" width="120" height="39"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7yr-VB-9Cs">
+                                <rect key="frame" x="152.5" y="449" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="7yr-VB-9Cs" secondAttribute="height" multiplier="1:1" id="dXO-D3-8PD"/>
+                                    <constraint firstAttribute="width" constant="70" id="zUH-rD-e6Q"/>
+                                </constraints>
+                                <state key="normal" image="Next"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qi9-c6-t2F" firstAttribute="top" secondItem="oHd-Jf-zNs" secondAttribute="bottom" constant="50" id="57D-yT-Joy"/>
+                            <constraint firstItem="qi9-c6-t2F" firstAttribute="centerX" secondItem="1Au-dj-SxT" secondAttribute="centerX" id="8pH-vE-Ahq"/>
+                            <constraint firstItem="7yr-VB-9Cs" firstAttribute="top" secondItem="qi9-c6-t2F" secondAttribute="bottom" constant="8" id="Mfm-X5-QM2"/>
+                            <constraint firstItem="oHd-Jf-zNs" firstAttribute="centerX" secondItem="1Au-dj-SxT" secondAttribute="centerX" id="OTL-b2-tnk"/>
+                            <constraint firstItem="7yr-VB-9Cs" firstAttribute="centerX" secondItem="1Au-dj-SxT" secondAttribute="centerX" id="bBL-Pw-m8J"/>
+                            <constraint firstItem="qi9-c6-t2F" firstAttribute="centerY" secondItem="1Au-dj-SxT" secondAttribute="centerY" id="y6G-jx-I9r"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5dK-Zc-mGi"/>
+                    </view>
+                    <connections>
+                        <outlet property="departureTimeLabel" destination="oHd-Jf-zNs" id="IDE-Et-YdE"/>
+                        <outlet property="nextButton" destination="7yr-VB-9Cs" id="c3R-Wo-UPt"/>
+                        <outlet property="timePiker" destination="qi9-c6-t2F" id="hNv-ZZ-CwB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NTe-fS-ELb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23" y="340"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Next" width="200" height="200"/>
+    </resources>
+</document>
